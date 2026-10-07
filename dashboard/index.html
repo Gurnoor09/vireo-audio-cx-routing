@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vireo Audio — Support Operations Diagnostic & Executive Decision Case</title>
+  <meta name="description" content="Executive decision dashboard for Vireo Audio CX leadership analyzing the Billing vs. Logistics support staffing dispute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js for visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark-theme">
+
+  <!-- Header & Stepper Navigation -->
+  <header class="app-header" id="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-badge">VIREO</div>
+        <div class="brand-text">
+          <h1>Customer Support Operations Diagnostic</h1>
+          <p>Headcount Allocation Case • Billing vs. Logistics</p>
+        </div>
+      </div>
+
+      <!-- Presentation Step Navigation -->
+      <nav class="nav-stepper" aria-label="Presentation Steps">
+        <button class="step-btn active" id="btn-step-1" onclick="goToStep(1)">
+          <span class="step-num">1</span>
+          <span class="step-title">Executive Summary</span>
+        </button>
+        <button class="step-btn" id="btn-step-2" onclick="goToStep(2)">
+          <span class="step-num">2</span>
+          <span class="step-title">Workload & Staffing</span>
+        </button>
+        <button class="step-btn" id="btn-step-3" onclick="goToStep(3)">
+          <span class="step-num">3</span>
+          <span class="step-title">Routing Diagnostic</span>
+        </button>
+        <button class="step-btn" id="btn-step-4" onclick="goToStep(4)">
+          <span class="step-num">4</span>
+          <span class="step-title">AI Router</span>
+        </button>
+        <button class="step-btn" id="btn-step-5" onclick="goToStep(5)">
+          <span class="step-num">5</span>
+          <span class="step-title">Validation</span>
+        </button>
+        <button class="step-btn" id="btn-step-6" onclick="goToStep(6)">
+          <span class="step-num">6</span>
+          <span class="step-title">Business Impact</span>
+        </button>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="nav-arrow-btn" id="btn-prev" onclick="prevStep()" title="Previous Screen">‹ Prev</button>
+        <span class="step-counter" id="step-counter">Screen 1 of 6</span>
+        <button class="nav-arrow-btn" id="btn-next" onclick="nextStep()" title="Next Screen">Next ›</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Presentation Slides Container -->
+  <main class="presentation-container">
+
+    <!-- ==========================================
+         SCREEN 1: EXECUTIVE SUMMARY / OPENING SCREEN
+         ========================================== -->
+    <section class="pres-screen active" id="screen-1">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 1 OF 6 • STRATEGIC VERDICT</div>
+        <h2 class="screen-title">Executive Summary & Decision Finding</h2>
+        <p class="screen-subtitle">What did we find in the 11,780 support tickets, and what should Vireo leadership do?</p>
+      </div>
+
+      <!-- Core Decision Hero Banner -->
+      <div class="decision-hero-card" id="card-decision-hero">
+        <div class="decision-pill">CORE RECOMMENDATION</div>
+        <h3 class="decision-quote">
+          "Fix routing before approving 2 Billing hires."
+        </h3>
+        <p class="decision-note">
+          Billing’s perceived 22% queue share is an optical illusion created by intake bot misrouting.
+        </p>
+      </div>
+
+      <!-- Key Findings Metric Grid -->
+      <div class="hero-kpi-grid">
+        <div class="hero-kpi-card highlight-danger">
+          <div class="kpi-tag">PRIMARY FINDING</div>
+          <div class="kpi-big-number">33.5%</div>
+          <div class="kpi-main-label">Billing Tickets Resolved Elsewhere</div>
+          <div class="kpi-sub-desc"><strong>860 / 2,564</strong> tickets assigned to Billing did not belong there.</div>
+        </div>
+
+        <div class="hero-kpi-card highlight-warning">
+          <div class="kpi-tag">WHERE THEY WENT</div>
+          <div class="kpi-big-number">795</div>
+          <div class="kpi-main-label">Resolved by Logistics</div>
+          <div class="kpi-sub-desc"><strong>92.4%</strong> of misrouted Billing tickets were delivery/carrier issues handled by Logistics.</div>
+        </div>
+
+        <div class="hero-kpi-card highlight-success">
+          <div class="kpi-tag">DIRECT ROUTING OPPORTUNITY</div>
+          <div class="kpi-big-number">₹2.5–2.9L</div>
+          <div class="kpi-main-label">Estimated Annual Value / Year</div>
+          <div class="kpi-sub-desc">Captured by eliminating avoidable transfer fees and triage-lag SLA credits.</div>
+        </div>
+
+        <div class="hero-kpi-card highlight-neutral">
+          <div class="kpi-tag">PROPOSED STAFFING DECISION VALUE</div>
+          <div class="kpi-big-number">~₹9L / yr</div>
+          <div class="kpi-main-label">Cost of 2 Proposed Hires</div>
+          <div class="kpi-sub-desc">Uncommitted proposed payroll expenditure; <em>not claimed as realized savings</em>.</div>
+        </div>
+      </div>
+
+      <!-- Executive Action Guidance -->
+      <div class="screen-bottom-callout">
+        <div class="callout-icon">💡</div>
+        <div class="callout-text">
+          <strong>Key Takeaway:</strong> Pausing the two Billing hires prevents spending ₹9L/year on an artificially inflated queue, while direct intake routing captures ₹2.5–2.9L/year in operational friction.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 2: WORKLOAD & STAFFING
+         ========================================== -->
+    <section class="pres-screen" id="screen-2">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 2 OF 6 • OPERATIONAL COMPARISON</div>
+        <h2 class="screen-title">Workload & Staffing: Billing vs. Logistics</h2>
+        <p class="screen-subtitle">Why raw assigned intake volume is misleading for headcount allocation decisions</p>
+      </div>
+
+      <!-- Hero Visual: Tickets Per Agent Comparison -->
+      <div class="hero-workload-banner">
+        <div class="workload-stat-block">
+          <div class="team-label">Billing Desk</div>
+          <div class="agent-count">4 Agents</div>
+          <div class="metric-huge">459.5</div>
+          <div class="metric-unit">Resolved Tickets / Agent</div>
+        </div>
+
+        <div class="vs-divider">
+          <div class="vs-circle">VS</div>
+          <div class="delta-badge">+16.3% Logistics</div>
+        </div>
+
+        <div class="workload-stat-block highlight-logistics">
+          <div class="team-label">Logistics Desk</div>
+          <div class="agent-count">5 Agents</div>
+          <div class="metric-huge">534.6</div>
+          <div class="metric-unit">Resolved Tickets / Agent</div>
+        </div>
+      </div>
+
+      <!-- Detailed Comparison Cards -->
+      <div class="comparison-grid">
+        <!-- Billing Column -->
+        <div class="comp-card billing-card">
+          <div class="comp-card-header">
+            <h3>Billing Operational Profile</h3>
+            <span class="badge-role">Transactional / Fast Closure</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Total Resolved Tickets:</span>
+            <span class="m-val">1,838 tickets</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Dedicated Staff:</span>
+            <span class="m-val">4 agents</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Resolved Tickets per Agent:</span>
+            <span class="m-val">459.5</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Median Elapsed Resolution:</span>
+            <span class="m-val success-text">1.2 hours</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Customer Satisfaction (CSAT):</span>
+            <span class="m-val">3.40 / 5.0</span>
+          </div>
+          <div class="comp-summary">
+            Software-based internal queries (invoices, PG checks) resolved rapidly in a single session.
+          </div>
+        </div>
+
+        <!-- Logistics Column -->
+        <div class="comp-card logistics-card">
+          <div class="comp-card-header">
+            <h3>Logistics Operational Profile</h3>
+            <span class="badge-role danger">Under Heavy Strain</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Total Resolved Tickets:</span>
+            <span class="m-val danger-text">2,673 tickets (+45.4% vs Billing)</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Dedicated Staff:</span>
+            <span class="m-val">5 agents</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Resolved Tickets per Agent:</span>
+            <span class="m-val danger-text">534.6 (+16.3% higher burden)</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Median Elapsed Resolution:</span>
+            <span class="m-val danger-text">26.1 hours (59.8% > 24h)</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="m-label">Customer Satisfaction (CSAT):</span>
+            <span class="m-val danger-text">2.87 / 5.0 (Desk lowest)</span>
+          </div>
+          <div class="comp-summary danger">
+            Multi-day carrier tracking and warehouse coordination creates prolonged open case aging.
+          </div>
+        </div>
+      </div>
+
+      <!-- Critical Methodology Note -->
+      <div class="methodology-note-box">
+        <span class="note-icon">📌</span>
+        <span class="note-text">
+          <strong>Methodology Note:</strong> Resolution time represents <strong>elapsed case duration</strong> (calendar clock turnaround time), not active agent labor hours. Logistics turnaround reflects external 3PL courier latency (BlueDart/Delhivery updates) and warehouse confirmations.
+        </span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 3: ROUTING DIAGNOSTIC
+         ========================================== -->
+    <section class="pres-screen" id="screen-3">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 3 OF 6 • ROOT CAUSE ANALYSIS</div>
+        <h2 class="screen-title">Routing Diagnostic: Why Billing Intake is Distorted</h2>
+        <p class="screen-subtitle">Tracing how simplistic intake rules artificially inflated Billing's perceived volume</p>
+      </div>
+
+      <!-- Flow Visual: Billing Intake Distortion -->
+      <div class="routing-flow-card">
+        <div class="flow-header">
+          <span class="flow-title">The Billing Ticket Displacement Pipeline</span>
+          <span class="flow-tag">Master Dataset Audit (11,780 Tickets)</span>
+        </div>
+
+        <div class="flow-diagram">
+          <div class="flow-node node-intake">
+            <div class="node-label">Billing Intake Queue</div>
+            <div class="node-num">2,564</div>
+            <div class="node-sub">Tickets Assigned by Bot</div>
+          </div>
+
+          <div class="flow-arrow-block">
+            <div class="arrow-line"></div>
+            <div class="arrow-text">860 Resolved Elsewhere (33.5%)</div>
+          </div>
+
+          <div class="flow-destinations">
+            <div class="dest-item dominant">
+              <span class="dest-team">Logistics</span>
+              <span class="dest-count">795 tickets (92.4% of misrouted)</span>
+            </div>
+            <div class="dest-item">
+              <span class="dest-team">Email Frontline</span>
+              <span class="dest-count">23 tickets</span>
+            </div>
+            <div class="dest-item">
+              <span class="dest-team">Chat Frontline</span>
+              <span class="dest-count">22 tickets</span>
+            </div>
+            <div class="dest-item">
+              <span class="dest-team">Returns Desk</span>
+              <span class="dest-count">20 tickets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Root Cause Explanation & Downstream Friction -->
+      <div class="grid-2col diagnostic-details">
+        <div class="diag-card">
+          <div class="diag-card-title">Root Cause Mechanism</div>
+          <p class="diag-p">
+            Keyword-based routing sends delivery and order issues to Billing whenever customer messages contain payment vocabulary such as <em>paid</em>, <em>charged</em>, <em>money</em>, or <em>debited</em>.
+          </p>
+          <div class="keyword-stat-list">
+            <div class="kw-stat">
+              <span class="kw-pct">26.0%</span>
+              <span class="kw-desc">of Billing intake contained explicit <strong>delivery/carrier keywords</strong> (tracking, courier, not delivered).</span>
+            </div>
+            <div class="kw-stat">
+              <span class="kw-pct">16.2%</span>
+              <span class="kw-desc">of Billing intake contained <strong>return/pickup keywords</strong> (reverse pickup, RTO, refund status).</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="diag-card">
+          <div class="diag-card-title">Downstream Operational Friction</div>
+          <div class="friction-metric-list">
+            <div class="f-row">
+              <span class="f-num danger-text">632</span>
+              <span class="f-text">Recorded inter-team transfers originated from Billing tickets (48.7% of all helpdesk transfers).</span>
+            </div>
+            <div class="f-row">
+              <span class="f-num danger-text">20.5%</span>
+              <span class="f-text">First-response SLA breach rate in Billing due to triage lag while tickets sit in the wrong queue.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 4: AI INTENT ROUTER
+         ========================================== -->
+    <section class="pres-screen" id="screen-4">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 4 OF 6 • THE INTERVENTION</div>
+        <h2 class="screen-title">AI Intent Router: Semantic Intake Classification</h2>
+        <p class="screen-subtitle">Replacing fragile keyword matching with full-context customer intent understanding</p>
+      </div>
+
+      <!-- Model Specifications Strip -->
+      <div class="methodology-strip">
+        <div class="meth-pill"><strong>Algorithm:</strong> TF-IDF + Logistic Regression</div>
+        <div class="meth-pill"><strong>Input Feature:</strong> Customer opening message</div>
+        <div class="meth-pill"><strong>Execution:</strong> Runs locally (zero cloud latency)</div>
+        <div class="meth-pill"><strong>Target:</strong> 5 functional classes</div>
+      </div>
+
+      <!-- Interactive Live Working Tool Container -->
+      <div class="interactive-tool-card">
+        <div class="tool-top-bar">
+          <span class="tool-heading">Live Ticket Router Testing Workbench</span>
+          <span class="tool-hint">Select a representative example or type any customer inquiry</span>
+        </div>
+
+        <!-- 3 Representative Presets -->
+        <div class="preset-buttons-group">
+          <button class="preset-btn active" id="btn-demo-1" onclick="loadDemoScenario(1)">
+            Example 1: Delivery Issue with Payment Language
+          </button>
+          <button class="preset-btn" id="demo-btn-2" onclick="loadDemoScenario(2)">
+            Example 2: Return Pickup with Bank Refund
+          </button>
+          <button class="preset-btn" id="demo-btn-3" onclick="loadDemoScenario(3)">
+            Example 3: Legitimate Corporate GST Request
+          </button>
+        </div>
+
+        <!-- Input Editor -->
+        <div class="live-input-wrapper">
+          <textarea id="live-ticket-input" class="ticket-textarea" rows="2" placeholder="Paste or type a customer message..."></textarea>
+          <button class="run-predict-btn" id="btn-predict-now" onclick="runLivePrediction()">Evaluate Routing</button>
+        </div>
+
+        <!-- Live Routing Comparison -->
+        <div class="prediction-comparison-grid">
+          <div class="pred-box box-legacy">
+            <div class="box-header">
+              <span class="engine-tag legacy">LEGACY KEYWORD BOT</span>
+              <span class="status-pill danger" id="live-bot-status">MISROUTED</span>
+            </div>
+            <div class="box-body">
+              <div class="p-row">
+                <span class="p-k">Assigned Team:</span>
+                <span class="p-v danger-text" id="live-bot-dest">Billing</span>
+              </div>
+              <div class="p-row">
+                <span class="p-k">Root Cause:</span>
+                <span class="p-v" id="live-bot-reason">Triggered on "paid/debited" keywords</span>
+              </div>
+              <div class="p-row">
+                <span class="p-k">Operational Result:</span>
+                <span class="p-v danger-text">Triage lag + manual hand-off required</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pred-box box-ai">
+            <div class="box-header">
+              <span class="engine-tag ai">VIREO AI INTENT ROUTER</span>
+              <span class="status-pill success" id="live-ai-status">CORRECT DISPATCH</span>
+            </div>
+            <div class="box-body">
+              <div class="p-row">
+                <span class="p-k">Predicted Destination:</span>
+                <span class="p-v success-text" id="live-ai-dest">Logistics</span>
+              </div>
+              <div class="p-row">
+                <span class="p-k">Intent Analysis:</span>
+                <span class="p-v" id="live-ai-reason">Identified fulfillment & carrier tracking failure</span>
+              </div>
+              <div class="p-row">
+                <span class="p-k">Operational Result:</span>
+                <span class="p-v success-text">Direct routing to owning team; 0 transfers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 5: VALIDATION
+         ========================================== -->
+    <section class="pres-screen" id="screen-5">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 5 OF 6 • OUT-OF-TIME GENERALIZATION</div>
+        <h2 class="screen-title">Model Validation & Out-of-Time Performance</h2>
+        <p class="screen-subtitle">Evaluating temporal stability on unseen Q2 2026 data (latest 20% chronological holdout)</p>
+      </div>
+
+      <!-- Hero Metric: Cross-Department Misrouting Reduction -->
+      <div class="hero-validation-card">
+        <div class="hero-val-tag">BUSINESS-CRITICAL HERO METRIC</div>
+        <h3 class="hero-val-title">Logistics → Billing Misrouting Elimination</h3>
+        
+        <div class="val-comparison-flex">
+          <div class="val-col legacy">
+            <div class="val-source">Legacy Keyword Bot</div>
+            <div class="val-stat">119 / 489</div>
+            <div class="val-sub"><strong>24.3%</strong> of true Logistics tickets dumped to Billing</div>
+          </div>
+
+          <div class="val-arrow-delta">
+            <span class="delta-headline">-94.1%</span>
+            <span class="delta-caption">Misrouting Reduction</span>
+          </div>
+
+          <div class="val-col ai">
+            <div class="val-source">Vireo AI Router</div>
+            <div class="val-stat success-text">7 / 489</div>
+            <div class="val-sub">Only <strong>1.4%</strong> sent to Billing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Operational Performance Metrics -->
+      <div class="grid-2col secondary-validation">
+        <!-- Logistics Recall Lift -->
+        <div class="val-metric-card">
+          <div class="val-card-header">
+            <h4>Logistics Recall Lift</h4>
+            <span class="badge-lift">+13.91 pp</span>
+          </div>
+          <div class="progress-comp-list">
+            <div class="p-comp-row">
+              <span class="team-label">Legacy Bot Recall:</span>
+              <div class="bar-wrap"><div class="bar legacy" style="width: 72.4%;"></div></div>
+              <span class="bar-num">72.39%</span>
+            </div>
+            <div class="p-comp-row">
+              <span class="team-label">AI Router Recall:</span>
+              <div class="bar-wrap"><div class="bar ai" style="width: 86.3%;"></div></div>
+              <span class="bar-num success-text">86.30%</span>
+            </div>
+          </div>
+          <p class="val-annotation">Significantly fewer delivery issues lost in foreign queues.</p>
+        </div>
+
+        <!-- Generalization Stability -->
+        <div class="val-metric-card">
+          <div class="val-card-header">
+            <h4>Temporal Generalization</h4>
+            <span class="badge-lift success">Zero Decay</span>
+          </div>
+          <div class="gen-stats-grid">
+            <div class="gen-stat">
+              <span class="g-num">81.32%</span>
+              <span class="g-label">Random Stratified Test (n=2,356)</span>
+            </div>
+            <div class="gen-stat">
+              <span class="g-num success-text">81.83%</span>
+              <span class="g-label">Chronological Holdout (n=2,356, Q2 2026)</span>
+            </div>
+          </div>
+          <p class="val-annotation">Model holds firmly without degradation on forward-looking data.</p>
+        </div>
+      </div>
+
+      <!-- Overall Accuracy Context Box (Subordinated) -->
+      <div class="subordinated-context-card">
+        <div class="sub-header">
+          <span>Overall Accuracy Comparison (Subordinated)</span>
+          <span class="accuracy-numbers">Legacy Bot: <strong>89.60%</strong> • AI Router: <strong>81.83%</strong></span>
+        </div>
+        <p class="sub-text">
+          <strong>Why overall accuracy is not the primary business metric:</strong> 50% of tickets belong to routine Frontline categories where the legacy bot defaults correctly. However, headline accuracy masks catastrophic cross-department failure in specialized queues where the bot falsely assigned 24.3% of delivery cases to Billing.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SCREEN 6: BUSINESS IMPACT & RECOMMENDATION
+         ========================================== -->
+    <section class="pres-screen" id="screen-6">
+      <div class="screen-header">
+        <div class="screen-badge">SCREEN 6 OF 6 • FINANCIAL LOGIC & NEXT STEPS</div>
+        <h2 class="screen-title">Business Impact & Strategic Recommendations</h2>
+        <p class="screen-subtitle">Disciplined financial categorization and clear operational sequencing</p>
+      </div>
+
+      <!-- Financial Categories: Strict Separation -->
+      <div class="grid-2col financial-separation-grid">
+        <!-- Direct Routing Opportunity -->
+        <div class="fin-box opportunity-box">
+          <div class="fin-box-header">
+            <span class="fin-type-tag success">DIRECT ROUTING OPPORTUNITY</span>
+            <div class="fin-amount">₹2.5–2.9L / yr</div>
+          </div>
+          <div class="fin-box-body">
+            <p class="fin-definition">
+              Achievable by eliminating avoidable inter-team transfer fees (~₹1.5–1.9L/yr) and reducing triage-lag SLA breach store credits (~₹1.0L/yr).
+            </p>
+            <div class="disclaimer-pill">
+              Estimated opportunity, not guaranteed savings.
+            </div>
+          </div>
+        </div>
+
+        <!-- Staffing Decision Value -->
+        <div class="fin-box decision-box">
+          <div class="fin-box-header">
+            <span class="fin-type-tag neutral">STAFFING DECISION VALUE</span>
+            <div class="fin-amount">~₹9L / yr</div>
+          </div>
+          <div class="fin-box-body">
+            <p class="fin-definition">
+              Cost associated with the proposed 2 hires requested for Billing (2 agents @ ~₹4.5L/year fully loaded).
+            </p>
+            <div class="disclaimer-pill neutral">
+              Cost associated with proposed 2 hires; not claimed as realized savings.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Action Roadmap -->
+      <div class="action-roadmap-card">
+        <h3 class="roadmap-title">The Recommended Operational Sequence</h3>
+        <div class="roadmap-steps">
+          <div class="road-step">
+            <div class="step-circle">1</div>
+            <div class="step-content">
+              <strong>Fix Routing</strong>
+              <span>Deploy AI intent classification to stop false transfers into Billing.</span>
+            </div>
+          </div>
+          <div class="road-arrow">➔</div>
+          <div class="road-step">
+            <div class="step-circle">2</div>
+            <div class="step-content">
+              <strong>Monitor for 60 Days</strong>
+              <span>Observe true stabilized queue sizes and delivery turnaround times.</span>
+            </div>
+          </div>
+          <div class="road-arrow">➔</div>
+          <div class="road-step">
+            <div class="step-circle">3</div>
+            <div class="step-content">
+              <strong>Reassess Staffing</strong>
+              <span>If Logistics remains overloaded after routing improves, reassess capacity there rather than assuming Billing needs two hires.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Footer Navigation Bar -->
+  <footer class="app-footer-nav">
+    <div class="footer-inner">
+      <div class="presentation-info">
+        <strong>Vireo Audio Support Operations Assessment</strong> • 2.5-Minute Executive Walkthrough
+      </div>
+      <div class="quick-nav-pills">
+        <button class="pill-btn active" onclick="goToStep(1)">1. Summary</button>
+        <button class="pill-btn" onclick="goToStep(2)">2. Workload</button>
+        <button class="pill-btn" onclick="goToStep(3)">3. Routing</button>
+        <button class="pill-btn" onclick="goToStep(4)">4. AI Router</button>
+        <button class="pill-btn" onclick="goToStep(5)">5. Validation</button>
+        <button class="pill-btn" onclick="goToStep(6)">6. Impact</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+  "teams": [
+    "Billing",
+    "Chat Frontline",
+    "Email Frontline",
+    "Escalations & Warranty",
+    "Logistics",
+    "Returns Desk",
+    "Voice Frontline"
+  ],
+  "top_keywords": {
+    "Billing": [
+      "payment",
+      "statement",
+      "paid package",
+      "paid",
+      "invoice",
+      "bank",
+      "waited",
+      "gst",
+      "shows",
+      "caps"
+    ],
+    "Chat Frontline": [
+      "connect",
+      "phone",
+      "pairing phone",
+      "tv",
+      "pairing",
+      "login account",
+      "app",
+      "tried",
+      "ordered airlite",
+      "compatible"
+    ],
+    "Email Frontline": [
+      "login",
+      "goes",
+      "phone",
+      "cancel",
+      "connect",
+      "pairing",
+      "helo pairing",
+      "login resolve",
+      "update stuck",
+      "strata urgent"
+    ],
+    "Escalations & Warranty": [
+      "claim",
+      "repair",
+      "strap",
+      "update repair",
+      "warranty",
+      "touch",
+      "service",
+      "pin",
+      "alive",
+      "unit"
+    ],
+    "Logistics": [
+      "delivered",
+      "paid",
+      "neighbours",
+      "box",
+      "days",
+      "order",
+      "hand",
+      "haven",
+      "got",
+      "courier"
+    ],
+    "Returns Desk": [
+      "pickup",
+      "return",
+      "refund",
+      "waiting refund",
+      "refund received",
+      "money return",
+      "received",
+      "promised",
+      "checked bank",
+      "box"
+    ],
+    "Voice Frontline": [
+      "ivr",
+      "transcript",
+      "ivr transcript",
+      "just",
+      "transcript pathetic",
+      "tried times",
+      "app",
+      "transcript bought",
+      "connect",
+      "quality regarding"
+    ]
+  },
+  "sample_scenarios": [
+    {
+      "text": "paid via upi, amount deducted, no order confirmation for pulse 2",
+      "bot_category": "Billing & Payments",
+      "bot_team": "Billing",
+      "ai_category": "Order Creation / Logistics",
+      "ai_team": "Logistics",
+      "verdict": "Misrouted by bot due to keyword \"paid/upi\". Actually an unfulfilled order creation issue."
+    },
+    {
+      "text": "Dear team, Got Pulse2 from Amazon recently. My order has not been delivered yet. Can someone fix this?",
+      "bot_category": "Billing & Payments",
+      "bot_team": "Billing",
+      "ai_category": "Delivery & Shipping",
+      "ai_team": "Logistics",
+      "verdict": "Bot triggered on \"paid/order\". Pure delivery delay. Belonged directly to Logistics."
+    },
+    {
+      "text": "Hi, bought Pulse2 on vireo.in. Please share invoice with GST number for my company.",
+      "bot_category": "Billing & Payments",
+      "bot_team": "Billing",
+      "ai_category": "Billing & Invoicing",
+      "ai_team": "Billing",
+      "verdict": "Legitimate Billing request. Correctly routed."
+    },
+    {
+      "text": "Still waiting for my refund on returned AirLite. Pickup was done 10 days ago.",
+      "bot_category": "Billing & Payments",
+      "bot_team": "Billing",
+      "ai_category": "Returns & Refunds",
+      "ai_team": "Returns Desk",
+      "verdict": "Bot triggered on \"refund\". Return pickup & QC refund belongs to Returns Desk."
+    },
+    {
+      "text": "Right earbud has constant buzzing static noise and disconnects after 5 minutes.",
+      "bot_category": "Connectivity",
+      "bot_team": "Chat Frontline",
+      "ai_category": "Audio Quality / Hardware Defect",
+      "ai_team": "Escalations & Warranty",
+      "verdict": "Persistent hardware flaw requiring Tier 2 RMA inspection."
+    }
+  ]
+}

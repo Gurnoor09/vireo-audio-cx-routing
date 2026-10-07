@@ -1,0 +1,59 @@
+# ─── Raw Assessment Data (NEVER COMMIT) ──────────────────────────────────────
+# These files were supplied privately by Vireo Audio and must not be redistributed.
+data/tickets.csv
+data/agents.csv
+data/customers.csv
+data/orders.csv
+data/products.csv
+data/support-policy.pdf
+data/email-thread.txt
+data/README.txt
+
+# ─── Derived Data Containing Customer Information ────────────────────────────
+outputs/clean_tickets.csv
+
+# ─── Trained Model Artifact ───────────────────────────────────────────────────
+# Large binary — train locally with: python src/ai_classifier.py
+outputs/smart_router_model.pkl
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.virtualenv/
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ─── Editors ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Logs & Temp ──────────────────────────────────────────────────────────────
+*.log
+*.tmp
+scratch/

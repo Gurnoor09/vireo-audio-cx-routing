@@ -1,0 +1,358 @@
+{
+  "total_tickets": 11780,
+  "team_workload": {
+    "Chat Frontline": {
+      "agent_count": 15,
+      "assigned_intake": 3030,
+      "resolved_workload": 3078,
+      "resolved_per_agent": 205.2,
+      "net_workload_vs_assigned": 48,
+      "mean_resolution_hours": 5.74,
+      "median_resolution_hours": 0.58,
+      "pct_over_24h": 5.51,
+      "csat_mean": 3.66,
+      "csat_count": 1385
+    },
+    "Email Frontline": {
+      "agent_count": 7,
+      "assigned_intake": 1807,
+      "resolved_workload": 1658,
+      "resolved_per_agent": 236.9,
+      "net_workload_vs_assigned": -149,
+      "mean_resolution_hours": 8.54,
+      "median_resolution_hours": 2.75,
+      "pct_over_24h": 6.82,
+      "csat_mean": 3.6,
+      "csat_count": 730
+    },
+    "Escalations & Warranty": {
+      "agent_count": 6,
+      "assigned_intake": 525,
+      "resolved_workload": 650,
+      "resolved_per_agent": 108.3,
+      "net_workload_vs_assigned": 125,
+      "mean_resolution_hours": 143.1,
+      "median_resolution_hours": 122.42,
+      "pct_over_24h": 100.0,
+      "csat_mean": 3.26,
+      "csat_count": 285
+    },
+    "Logistics": {
+      "agent_count": 5,
+      "assigned_intake": 1905,
+      "resolved_workload": 2673,
+      "resolved_per_agent": 534.6,
+      "net_workload_vs_assigned": 768,
+      "mean_resolution_hours": 42.54,
+      "median_resolution_hours": 26.07,
+      "pct_over_24h": 62.85,
+      "csat_mean": 2.87,
+      "csat_count": 1261
+    },
+    "Voice Frontline": {
+      "agent_count": 4,
+      "assigned_intake": 900,
+      "resolved_workload": 766,
+      "resolved_per_agent": 191.5,
+      "net_workload_vs_assigned": -134,
+      "mean_resolution_hours": 4.43,
+      "median_resolution_hours": 0.93,
+      "pct_over_24h": 3.04,
+      "csat_mean": 3.67,
+      "csat_count": 365
+    },
+    "Billing": {
+      "agent_count": 4,
+      "assigned_intake": 2564,
+      "resolved_workload": 1838,
+      "resolved_per_agent": 459.5,
+      "net_workload_vs_assigned": -726,
+      "mean_resolution_hours": 12.67,
+      "median_resolution_hours": 1.23,
+      "pct_over_24h": 17.91,
+      "csat_mean": 3.4,
+      "csat_count": 793
+    },
+    "Returns Desk": {
+      "agent_count": 3,
+      "assigned_intake": 1049,
+      "resolved_workload": 1117,
+      "resolved_per_agent": 372.3,
+      "net_workload_vs_assigned": 68,
+      "mean_resolution_hours": 38.86,
+      "median_resolution_hours": 32.38,
+      "pct_over_24h": 70.21,
+      "csat_mean": 3.35,
+      "csat_count": 526
+    }
+  },
+  "misrouting_stats": {
+    "Billing": {
+      "total_intake": 2564,
+      "misrouted_count": 860,
+      "misrouting_rate_pct": 33.54,
+      "resolved_by_own_team": 1704,
+      "top_destinations": {
+        "Logistics": 795,
+        "Email Frontline": 23,
+        "Chat Frontline": 22,
+        "Returns Desk": 20
+      }
+    },
+    "Chat Frontline": {
+      "total_intake": 3030,
+      "misrouted_count": 409,
+      "misrouting_rate_pct": 13.5,
+      "resolved_by_own_team": 2621,
+      "top_destinations": {
+        "Email Frontline": 206,
+        "Escalations & Warranty": 88,
+        "Billing": 42,
+        "Returns Desk": 37,
+        "Logistics": 36
+      }
+    },
+    "Email Frontline": {
+      "total_intake": 1807,
+      "misrouted_count": 455,
+      "misrouting_rate_pct": 25.18,
+      "resolved_by_own_team": 1352,
+      "top_destinations": {
+        "Chat Frontline": 342,
+        "Escalations & Warranty": 40,
+        "Billing": 27,
+        "Returns Desk": 24,
+        "Logistics": 22
+      }
+    },
+    "Escalations & Warranty": {
+      "total_intake": 525,
+      "misrouted_count": 35,
+      "misrouting_rate_pct": 6.67,
+      "resolved_by_own_team": 490,
+      "top_destinations": {
+        "Email Frontline": 10,
+        "Chat Frontline": 8,
+        "Returns Desk": 8,
+        "Billing": 6,
+        "Logistics": 3
+      }
+    },
+    "Logistics": {
+      "total_intake": 1905,
+      "misrouted_count": 114,
+      "misrouting_rate_pct": 5.98,
+      "resolved_by_own_team": 1791,
+      "top_destinations": {
+        "Billing": 35,
+        "Chat Frontline": 31,
+        "Email Frontline": 29,
+        "Returns Desk": 19
+      }
+    },
+    "Returns Desk": {
+      "total_intake": 1049,
+      "misrouted_count": 56,
+      "misrouting_rate_pct": 5.34,
+      "resolved_by_own_team": 993,
+      "top_destinations": {
+        "Billing": 16,
+        "Logistics": 15,
+        "Email Frontline": 14,
+        "Chat Frontline": 11
+      }
+    },
+    "Voice Frontline": {
+      "total_intake": 900,
+      "misrouted_count": 134,
+      "misrouting_rate_pct": 14.89,
+      "resolved_by_own_team": 766,
+      "top_destinations": {
+        "Chat Frontline": 43,
+        "Escalations & Warranty": 32,
+        "Email Frontline": 24,
+        "Returns Desk": 16,
+        "Logistics": 11,
+        "Billing": 8
+      }
+    }
+  },
+  "transfers": {
+    "total_transfers_recorded": 1299,
+    "transfer_cost_total_inr": 396195,
+    "by_assigned_team": {
+      "Billing": {
+        "count": 1558,
+        "sum": 632.0,
+        "mean": 0.4056482670089859
+      },
+      "Chat Frontline": {
+        "count": 2063,
+        "sum": 245.0,
+        "mean": 0.1187590887057683
+      },
+      "Email Frontline": {
+        "count": 1229,
+        "sum": 139.0,
+        "mean": 0.11310008136696502
+      },
+      "Escalations & Warranty": {
+        "count": 360,
+        "sum": 43.0,
+        "mean": 0.11944444444444445
+      },
+      "Logistics": {
+        "count": 1233,
+        "sum": 112.0,
+        "mean": 0.0908353609083536
+      },
+      "Returns Desk": {
+        "count": 680,
+        "sum": 46.0,
+        "mean": 0.06764705882352941
+      },
+      "Voice Frontline": {
+        "count": 605,
+        "sum": 82.0,
+        "mean": 0.13553719008264462
+      }
+    },
+    "csat_by_transfers": {
+      "0.0": {
+        "count": 3017,
+        "mean": 3.522373218428903
+      },
+      "1.0": {
+        "count": 424,
+        "mean": 2.7523584905660377
+      },
+      "2.0": {
+        "count": 101,
+        "mean": 2.6633663366336635
+      }
+    }
+  },
+  "sla_performance": {
+    "total_breaches": 1340,
+    "breach_rate_pct": 11.38,
+    "total_credits_inr": 469000,
+    "by_channel": {
+      "chat": {
+        "total": 5387,
+        "breaches": 720,
+        "breach_rate": 13.37,
+        "credits_inr": 239750
+      },
+      "email": {
+        "total": 3555,
+        "breaches": 430,
+        "breach_rate": 12.1,
+        "credits_inr": 144200
+      },
+      "social": {
+        "total": 1136,
+        "breaches": 91,
+        "breach_rate": 8.01,
+        "credits_inr": 30450
+      },
+      "voice": {
+        "total": 1702,
+        "breaches": 99,
+        "breach_rate": 5.82,
+        "credits_inr": 33950
+      }
+    },
+    "by_assigned_team": {
+      "Billing": {
+        "total": 2564,
+        "breaches": 525,
+        "breach_rate": 20.48,
+        "credits_inr": 174650
+      },
+      "Chat Frontline": {
+        "total": 3030,
+        "breaches": 226,
+        "breach_rate": 7.46,
+        "credits_inr": 75250
+      },
+      "Email Frontline": {
+        "total": 1807,
+        "breaches": 198,
+        "breach_rate": 10.96,
+        "credits_inr": 66500
+      },
+      "Escalations & Warranty": {
+        "total": 525,
+        "breaches": 43,
+        "breach_rate": 8.19,
+        "credits_inr": 13650
+      },
+      "Logistics": {
+        "total": 1905,
+        "breaches": 184,
+        "breach_rate": 9.66,
+        "credits_inr": 63000
+      },
+      "Returns Desk": {
+        "total": 1049,
+        "breaches": 113,
+        "breach_rate": 10.77,
+        "credits_inr": 37800
+      },
+      "Voice Frontline": {
+        "total": 900,
+        "breaches": 51,
+        "breach_rate": 5.67,
+        "credits_inr": 17500
+      }
+    }
+  },
+  "policy_violations": {
+    "double_dipped_orders": 149,
+    "double_dipped_total_waste_inr": 499715.0,
+    "goodwill_overage_count": 29,
+    "goodwill_overage_waste_inr": 59148.0
+  },
+  "fcr_repeat_contacts": {
+    "repeat_count": 3187,
+    "repeat_rate_pct": 27.05,
+    "repeat_cost_total_inr": 874820.0
+  },
+  "financial_summary": {
+    "misallocated_billing_hires": {
+      "description": "Cost of hiring 2 unnecessary agents for Billing",
+      "amount_inr": 900000,
+      "source": "Arjun Mehta quote & Policy \u00a74 (2 hires @ Rs 4.5L/yr)"
+    },
+    "internal_transfer_waste": {
+      "description": "Internal hand-offs across teams (helpdesk period)",
+      "amount_inr": 396195,
+      "count": 1299,
+      "unit_cost": 305
+    },
+    "sla_breach_credits": {
+      "description": "Store credits automatically paid out for response breaches",
+      "amount_inr": 469000,
+      "count": 1340,
+      "unit_credit": 350
+    },
+    "double_dipping_violations": {
+      "description": "Prohibited orders receiving both refund and replacement",
+      "amount_inr": 499715.0,
+      "orders_count": 149,
+      "refunds_paid": 220455.0,
+      "replacement_cost": 279260.0
+    },
+    "goodwill_cap_overages": {
+      "description": "Unapproved refunds exceeding Rs 500 goodwill limit",
+      "amount_inr": 59148.0,
+      "count": 29
+    },
+    "repeat_contact_costs": {
+      "description": "Handling costs for return contacts within 30 days of resolution",
+      "amount_inr": 874820.0,
+      "count": 3187
+    },
+    "total_addressable_leakage_inr": 3198878.0
+  }
+}
